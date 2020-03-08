@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Javascript Tetris</title>
+  <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
+  <title>Think Genius</title>
   <style>
     body      { font-family: Helvetica, sans-serif; }
     #tetris   { margin: 1em auto; padding: 1em; border: 4px solid black; border-radius: 10px; background-color: #F8F8F8; }
@@ -12,7 +13,7 @@
     #menu p a { text-decoration: none; color: black; }
     #upcoming { display: block; margin: 0 auto; background-color: #E0E0E0; }
     #score    { color: red; font-weight: bold; vertical-align: middle; }
-    #rows     { color: blue; font-weight: bold; vertical-align: middle; }
+    /*#rows     { color: blue; font-weight: bold; vertical-align: middle; }*/
     #stats    { position: absolute; bottom: 0em; right: 1em; }
 body {
   font-family: Arial;
@@ -130,8 +131,27 @@ function checkAnswer(quizForm,
 //-->
 </SCRIPT>
   <div class="split left">
-  <div class="centered">
+    <center style="color:blue;font-family: 'Concert One';font-weight:bolder;"><b>THINK GENIUS</b></center> 
+  <div>
   What is JavaScript?
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Another name for Java<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. A scripting language mostly for the web<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. When you use Java without compiling<BR>
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer"></INPUT>
+</FORM>
+<hr> 
+
+   What is JavaScript?
 
 <FORM method="POST"
       onSubmit="return checkAnswer(this,'B');"
@@ -147,8 +167,108 @@ B. A scripting language mostly for the web<BR>
 C. When you use Java without compiling<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
-<br>
+
 </FORM>
+<hr> 
+
+   What is JavaScript?
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Another name for Java<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. A scripting language mostly for the web<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. When you use Java without compiling<BR>
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+</FORM>
+<hr> 
+
+   What is JavaScript?
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Another name for Java<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. A scripting language mostly for the web<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. When you use Java without compiling<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+
+</FORM>
+<hr> 
+
+   What is JavaScript?
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Another name for Java<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. A scripting language mostly for the web<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. When you use Java without compiling<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+
+</FORM>
+<hr> 
+
+   What is JavaScript?
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Another name for Java<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. A scripting language mostly for the web<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. When you use Java without compiling<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+
+</FORM>
+<hr> 
+
+   What is JavaScript?
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Another name for Java<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. A scripting language mostly for the web<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. When you use Java without compiling<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+
+</FORM>
+<hr> 
+
    What is JavaScript?
 
 <FORM method="POST"
@@ -176,7 +296,7 @@ C. When you use Java without compiling<BR>
       <p id="start"><a href="javascript:play();">Press Space to Play.</a></p>
       <p><canvas id="upcoming"></canvas></p>
       <p>score <span id="score">00000</span></p>
-      <p>rows <span id="rows">0</span></p>
+      <!-- <p>rows <span id="rows">0</span></p> -->
     </div>
     <canvas id="canvas">
       Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
@@ -387,7 +507,7 @@ C. When you use Java without compiling<BR>
     function setScore(n)            { score = n; setVisualScore(n);  }
     function addScore(n)            { score = score + n;   }
     function clearScore()           { setScore(0); }
-    function clearRows()            { setRows(0); }
+    // function clearRows()            { setRows(0); }
     function setRows(n)             { rows = n; step = Math.max(speed.min, speed.start - (speed.decrement*rows)); invalidateRows(); }
     function addRows(n)             { setRows(rows + n); }
     function getBlock(x,y)          { return (blocks && blocks[x] ? blocks[x][y] : null); }
