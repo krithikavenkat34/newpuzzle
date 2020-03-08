@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Javascript Tetris</title>
+  <title>Think Genius Promo</title>
   <style>
     body      { font-family: Helvetica, sans-serif; }
     #tetris   { margin: 1em auto; padding: 1em; border: 4px solid black; border-radius: 10px; background-color: #F8F8F8; }
@@ -10,7 +10,7 @@
     #menu     { display: inline-block; vertical-align: top; position: relative; }
     #menu p   { margin: 0.5em 0; text-align: center; }
     #menu p a { text-decoration: none; color: black; }
-    #upcoming { display: block; margin: 0 auto; background-color: #E0E0E0; }
+    #upcoming { display: block; margin: 0 auto; background-color: white; border:2px solid black; }
     #score    { color: red; font-weight: bold; vertical-align: middle; }
     #rows     { color: blue; font-weight: bold; vertical-align: middle; }
     #stats    { position: absolute; bottom: 0em; right: 1em; }
@@ -30,6 +30,7 @@
 
 .left {
   left: 0;
+  padding:20px;
 }
 
 .right {
@@ -48,7 +49,12 @@
   width: 150px;
   border-radius: 50%;
 }
-    @media screen and (min-width:   0px) and (min-height:   0px)  { #tetris { font-size: 0.75em; width: 250px; } #menu { width: 100px; height: 200px; } #upcoming { width:  50px; height:  50px; } #canvas { width: 100px; height: 200px; } } /* 10px chunks */
+   #im2{
+  height:10%;
+  width:20%;
+  display: inline-block;
+  }
+   @media screen and (min-width:   0px) and (min-height:   0px)  { #tetris { font-size: 0.75em; width: 250px; } #menu { width: 100px; height: 200px; } #upcoming { width:  50px; height:  50px; } #canvas { width: 100px; height: 200px; } } /* 10px chunks */
     @media screen and (min-width: 400px) and (min-height: 400px)  { #tetris { font-size: 1.00em; width: 350px; } #menu { width: 150px; height: 300px; } #upcoming { width:  75px; height:  75px; } #canvas { width: 150px; height: 300px; } } /* 15px chunks */
     @media screen and (min-width: 500px) and (min-height: 500px)  { #tetris { font-size: 1.25em; width: 450px; } #menu { width: 200px; height: 400px; } #upcoming { width: 100px; height: 100px; } #canvas { width: 200px; height: 400px; } } /* 20px chunks */
     @media screen and (min-width: 600px) and (min-height: 600px)  { #tetris { font-size: 1.50em; width: 550px; } #menu { width: 250px; height: 500px; } #upcoming { width: 125px; height: 125px; } #canvas { width: 250px; height: 500px; } } /* 25px chunks */
@@ -103,15 +109,12 @@ function checkAnswer(quizForm,
   //
   if(s == theAnswer)
   {
-    alert("'"+s+"' is correct!");
-    if(urlRight)
-    {
-    document.location.href = urlRight;
-    }
+    
   }
   else
   {
     alert("'"+s+"' is incorrect.");
+    var e=getDocumentById("bad-emoji.png");
     if( urlWrong )
     {
     document.location.href = urlWrong;
@@ -128,242 +131,366 @@ function checkAnswer(quizForm,
 }
 </SCRIPT>
   <div class="split left">
-    <center><b>THINK GENIUS</b></center>
+    <div>
+       <center><img id="im2" src="ablazepic.jpg"> <center>
+        <center style="Font-size:20px"><b>Presents</b></center>
+    <center style="Font-size:40px"><b>THINK GENIUS</b></center>
+  </div>
      <hr>
-   What is JavaScript?
+   In COMAL language programs, parameters after name of procedure must be put in
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'A');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. brackets<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. back-slash<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. insecure data<BR>
+
+<INPUT TYPE="RADIO" VALUE="D" NAME="cc">
+D. punctuation marks<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
     <hr>
-   What is JavaScript?
+   Programming language COBOL works best if used for
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'C');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. beginners<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. student applications<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. commercial applications<BR>
+
+<INPUT TYPE="RADIO" VALUE="D" NAME="cc">
+D. household user interface<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+   Name given by a programmer to some data is classified as
 
 <FORM method="POST"
       onSubmit="return checkAnswer(this,'B');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. mantissa<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B.  identifier <BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. exponent<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. identification<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
- What is JavaScript?
+ Comments used to make program easier are also called as
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'A');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. narrative<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. unmarked stringe<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. marked variables<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. unmarked variable<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+   Programming language which is used for scientific purposes and work is to be done in batches is
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'D');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. LOGO<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. COMAL<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. PASCAL<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. FORTRAN<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
- What is JavaScript?
+ In high-level language Pascal, area is calculated as
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'A');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. Area: = Width*Length;<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. length 100: area*20width<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. 100 Area = Width*Length<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. 100 Area = Width*Length<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+   Data types are differed on basis of
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'C');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. way of storage<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. type of operations<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. both (a) and (b)<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. type of operators used<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+   If element in array has two subscripts, then array has
 
 <FORM method="POST"
       onSubmit="return checkAnswer(this,'B');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. single dimension<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. two dimensions<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. three dimensions<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. four dimensions<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
- What is JavaScript?
+'object program' is also called
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'C');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. compiler<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. assembler<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. machine code<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. program code<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+   Data structure in which all elements have similar name is considered as
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'A');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. array<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. data structure<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. string structure<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D.positive structure<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM> 
  <hr>
-   What is JavaScript?
+   Which is not a part of Asymmetric Enryption ?
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'A');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. Mining<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. Public key<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. Passpharse<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. Private Key<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
     <hr>
-   What is JavaScript?
+   Who created BitCoin ?
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'A');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. 
+satoshi Nakamota<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. Samsung<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. John Mcafree<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. China<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+  <p><canvas id="upcoming"></canvas></p>
+<br>
+</FORM>
+<hr>
+   Where do you store your cryptocurrency ?
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'C');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Bank Account<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. Floppy Disk<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. Wallet<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. in your pocket<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+  <p><canvas id="upcoming"></canvas></p>
+<br>
+</FORM>
+<hr>
+ What is blockchain ?
 
 <FORM method="POST"
       onSubmit="return checkAnswer(this,'B');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. A distributed ledger on a peer-to-peer network<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. A type of cryptocurrency<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. An Exchange<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. A centralized ledger<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+  <p><canvas id="upcoming"></canvas></p>
+<br>
+</FORM>
+<hr>
+   Blockchain is same as bitcoin ?
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. True<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. False<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+  <p><canvas id="upcoming"></canvas></p>
+<br>
+</FORM>
+<hr>
+ Are BlockChain fully public ?
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'A');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. True<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. False<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. It depends<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
@@ -385,345 +512,308 @@ B. A scripting language mostly for the web<BR>
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
 C. When you use Java without compiling<BR>
 
-<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
-  <p><canvas id="upcoming"></canvas></p>
-<br>
-</FORM>
-<hr>
- What is JavaScript?
-
-<FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
->
-
-<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
-
-<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
-
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+D. When you use Java without compiling<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+  Inside which HTML element do we put the JavaScript?
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'C');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. javascript tag<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. js tag<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. script tag<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. scripting tag<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
- What is JavaScript?
+What is the correct JavaScript syntax to change the content of the HTML element below?
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'C');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. document.getElement("p").innerHTML = "Hello World!";<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. #demo.innerHTML = "Hello World!";<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. document.getElementById("demo").innerHTML = "Hello World!";  <BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. document.getElementByName("p").innerHTML = "Hello World!";<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+ Where is the correct place to insert a JavaScript?
 
 <FORM method="POST"
       onSubmit="return checkAnswer(this,'B');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. The <head> section<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. Both the <head> section and the <body> section are correct  <BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
-
-<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
-  <p><canvas id="upcoming"></canvas></p>
-<br>
-</FORM>
-<hr>
-   What is JavaScript?
-
-<FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
->
-
-<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
-
-<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
-
-<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
-
-<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
-  <p><canvas id="upcoming"></canvas></p>
-<br>
-</FORM>
-<hr>
- What is JavaScript?
-
-<FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
->
-
-<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
-
-<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
-
-<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
-
-<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
-  <p><canvas id="upcoming"></canvas></p>
-<br>
-</FORM>
-<hr>
-   What is JavaScript?
-
-<FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
->
-
-<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
-
-<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
-
-<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. The <body> section<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM> 
  <hr>
-   What is JavaScript?
+  What is the correct syntax for referring to an external script called "xxx.js"?
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'A');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. script src="xxx.js"  <BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. script href="xxx.js" <BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. script name="xxx.js"<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
     <hr>
-   What is JavaScript?
+   The external JavaScript file must contain the "script" tag.
 
 <FORM method="POST"
       onSubmit="return checkAnswer(this,'B');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. True<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
-
-<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+B. False<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+   Is JavaScript case-sensitive?
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'A');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. True<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
-
-<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+B. False<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
- What is JavaScript?
+What is the correct JavaScript syntax for opening a new window called "w2" ?
 
 <FORM method="POST"
       onSubmit="return checkAnswer(this,'B');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. w2 = window.new("http://www.w3schools.com");<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
-
-<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+B. w2 = window.open("http://www.w3schools.com");  <BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+   How do you round the number 7.25, to the nearest integer?
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'D');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. round(7.25) <BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. rnd(7.25)<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. Math.rnd(7.25)<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. Math.round(7.25)<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
- What is JavaScript?
+ #include<stdio.h>
+
+main() 
+{
+    char c = 'A'+255;
+   
+    printf("%c", c);
+}
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'A');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. A<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. B<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. Overflow error at runtime<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. Compile error<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+   #include<stdio.h>
+
+main()
+{
+   int x = 1;
+   
+   do
+      printf("%d ", x);
+   while(x++<=1);
+}
 
 <FORM method="POST"
       onSubmit="return checkAnswer(this,'B');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. 1<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. 1 2<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. No output<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. Error<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+    In the given below statement, what does the “arr” indicate?
+      char *arr[30];
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'D');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. arr is a array of function<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. arr is a array of 30 characters<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C.  arr is a pointer to an array<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. arr is a array of 30 character pointers<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
- What is JavaScript?
+ Choose the correct unary operators in C – a) !, b) ~, c) ^&, d) ++
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'C');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A. a,b,c<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. b,c,d<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. a,b,d<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. c,d,a<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
 <br>
 </FORM>
 <hr>
-   What is JavaScript?
+   #include<stdio.h>
+
+int main ()
+{
+   FILE *fp;
+   
+   fp = fopen("source.txt", "r");
+   return 0;
+}
 
 <FORM method="POST"
-      onSubmit="return checkAnswer(this,'B');"
+      onSubmit="return checkAnswer(this,'A');"
 >
 
 <INPUT TYPE="RADIO" VALUE="A" NAME="cc">
-A. Another name for Java<BR>
+A.  For reading<BR>
 
 <INPUT TYPE="RADIO" VALUE="B" NAME="cc">
-B. A scripting language mostly for the web<BR>
+B. For reading and writing<BR>
 
 <INPUT TYPE="RADIO" VALUE="C" NAME="cc">
-C. When you use Java without compiling<BR>
+C. For creating a new file "source.txt" for reading<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+D. For creating a new file "source.txt" for writing<BR>
 
 <INPUT TYPE="SUBMIT" VALUE="Submit Answer">
   <p><canvas id="upcoming"></canvas></p>
@@ -736,7 +826,7 @@ C. When you use Java without compiling<BR>
   <div class="centered">
   <div id="tetris">
     <div id="menu">
-      <p id="start"><a href="javascript:play();">Press Space to Play.</a></p>
+      <p id="start"><a href="javascript:play();">Start Filling the blocks</a></p>
       <p>score <span id="score">00000</span></p>
       <p>rows <span id="rows">0</span></p>
     </div>
@@ -775,7 +865,7 @@ C. When you use Java without compiling<BR>
     // game constants
     //-------------------------------------------------------------------------
 
-    var KEY     = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
+    var KEY     = { ESC: 27, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
         DIR     = { UP: 0, RIGHT: 1, DOWN: 2, LEFT: 3, MIN: 0, MAX: 3 },
         stats   = new Stats(),
         canvas  = get('canvas'),
