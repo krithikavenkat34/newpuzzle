@@ -109,7 +109,11 @@ function checkAnswer(quizForm,
   //
   if(s == theAnswer)
   {
-    
+     alert("'"+s+"' is Correct.");
+    if( urlRight )
+    {
+    document.location.href = urlRight;
+    }
   }
   else
   {
