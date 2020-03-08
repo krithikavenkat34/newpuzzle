@@ -60,16 +60,16 @@ b:26},fg:{r:255,g:0,b:128}}};
   c.style.margin="0px 0px 1px 3px";
   c.innerHTML='<span style="font-weight:bold">MS</span>';
   f.appendChild(c);
-  a=document.createElement("canvas");
-  a.width=74;
-  a.height=30;
-  a.style.display="block";
-  a.style.marginLeft="3px";
-  f.appendChild(a);
-  o=a.getContext("2d");
-  o.fillStyle="rgb("+b.ms.bg.r+","+b.ms.bg.g+","+b.ms.bg.b+")";
-  o.fillRect(0,0,a.width,a.height);
-  B=o.getImageData(0,0,a.width,a.height);
+//   a=document.createElement("canvas");
+//   a.width=74;
+//   a.height=30;
+//   a.style.display="block";
+//   a.style.marginLeft="3px";
+//   f.appendChild(a);
+//   o=a.getContext("2d");
+//   o.fillStyle="rgb("+b.ms.bg.r+","+b.ms.bg.g+","+b.ms.bg.b+")";
+//   o.fillRect(0,0,a.width,a.height);
+//   B=o.getImageData(0,0,a.width,a.height);
   try
   {
     performance&&performance.memory&&performance.memory.totalJSHeapSize&&(t=3)
@@ -90,16 +90,16 @@ b:26},fg:{r:255,g:0,b:128}}};
   i.style.margin="0px 0px 1px 3px";
   i.innerHTML='<span style="font-weight:bold">MB</span>';
   h.appendChild(i);
-  a=document.createElement("canvas");
-  a.width=74;
-  a.height=30;
-  a.style.display="block";
-  a.style.marginLeft="3px";
-  h.appendChild(a);
-  q=a.getContext("2d");
-  q.fillStyle="#301010";
-  q.fillRect(0,0,a.width,a.height);
-  E=q.getImageData(0,0,a.width,a.height);
+//   a=document.createElement("canvas");
+//   a.width=74;
+//   a.height=30;
+//   a.style.display="block";
+//   a.style.marginLeft="3px";
+//   h.appendChild(a);
+//   q=a.getContext("2d");
+//   q.fillStyle="#301010";
+//   q.fillRect(0,0,a.width,a.height);
+//   E=q.getImageData(0,0,a.width,a.height);
   return
   {
     domElement:g,update:function(){
