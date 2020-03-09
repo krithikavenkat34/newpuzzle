@@ -117,7 +117,7 @@ var d= function checkAnswer(quizForm,
     {
     document.location.href = urlRight;
     }
-    return true;
+    d=true;
   }
   else
   {
@@ -126,7 +126,7 @@ var d= function checkAnswer(quizForm,
     {
     document.location.href = urlWrong;
     }
-    return false;
+    d=false;
   }
 
   // return "false" to indicate not to
