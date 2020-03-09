@@ -827,7 +827,7 @@ var d= function checkAnswer(quizForm,
     {
     document.location.href = urlRight;
     }
-    d=true;
+    randomPiece();
   }
   else
   {
@@ -836,7 +836,7 @@ var d= function checkAnswer(quizForm,
     {
     document.location.href = urlWrong;
     }
-    d=false;
+    document.write("bad-emoji.jpg");
   }
 
   // return "false" to indicate not to
