@@ -112,7 +112,7 @@ function checkAnswer(quizForm,
   //
   if(s == theAnswer)
   {
-     alert("'"+s+"' is Correct.");
+//      alert("'"+s+"' is Correct.");
     run();
     if( urlRight )
     {
@@ -121,11 +121,12 @@ function checkAnswer(quizForm,
   }
   else
   {
-    alert("'"+s+"' is incorrect.");
+//     alert("'"+s+"' is incorrect.");
     if( urlWrong )
     {
     document.location.href = urlWrong;
     }
+    var x = document.getElementById("bad-emoji.jpg");
   }
 
   // return "false" to indicate not to
