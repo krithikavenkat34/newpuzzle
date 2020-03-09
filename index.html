@@ -75,7 +75,7 @@
 // Documentation:
 //   http://chami.com/tips/javascript/
 //
-function checkAnswer(quizForm,
+var d= function checkAnswer(quizForm,
                      theAnswer,
                      urlRight,
                      urlWrong)
@@ -117,6 +117,7 @@ function checkAnswer(quizForm,
     {
     document.location.href = urlRight;
     }
+    return true;
   }
   else
   {
@@ -125,6 +126,7 @@ function checkAnswer(quizForm,
     {
     document.location.href = urlWrong;
     }
+    return false;
   }
 
   // return "false" to indicate not to
@@ -978,7 +980,7 @@ D. For creating a new file "source.txt" for writing<BR>
       showStats(); // initialize FPS counter
       addEvents(); // attach keydown and resize events
 
-      var last = now = timestamp();
+      var last  = now = loadScript("index.html",d);
       function frame() {
         now = timestamp();
         update(Math.min(1, (now - last) / 1000.0)); // using requestAnimationFrame have to be able to handle large delta's caused when it 'hibernates' in a background or non-visible tab
