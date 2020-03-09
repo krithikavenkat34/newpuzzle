@@ -113,7 +113,6 @@ function checkAnswer(quizForm,
   if(s == theAnswer)
   {
 //      alert("'"+s+"' is Correct.");
-    run();
     if( urlRight )
     {
     document.location.href = urlRight;
@@ -126,7 +125,6 @@ function checkAnswer(quizForm,
     {
     document.location.href = urlWrong;
     }
-    var x = document.getElementById("bad-emoji.jpg");
   }
 
   // return "false" to indicate not to
