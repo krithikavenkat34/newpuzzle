@@ -69,6 +69,7 @@
 
 <body>
   <script>
+    int count=0;
     function checkAnswer(quizForm,
                      theAnswer,
                      urlRight,
@@ -106,21 +107,7 @@
   //
   if(s == theAnswer)
   {
-     alert("'"+s+"' is Correct.");
-    if( urlRight )
-    {
-    document.location.href = urlRight;
-    }
-//     randomPiece();
-  }
-  else
-  {
-    alert("'"+s+"' is incorrect.");
-    if( urlWrong )
-    {
-    document.location.href = urlWrong;
-    }
-//     document.write("bad-emoji.jpg");
+    count++;
   }
 
   // return "false" to indicate not to
@@ -820,12 +807,12 @@ D. For creating a new file "source.txt" for writing<BR>
   </div>
 <div class="split right">
   <div class="centered">
-  <div id="tetris">
+    <div id="tetris">
     <div id="menu">
-      <p id="start"><a href="javascript:play();">Start Filling the blocks</a></p>
+      <p id="start"><a href="javascript:play();">Press Space to Play.</a></p>
+      <p><canvas id="upcoming"></canvas></p>
       <p>score <span id="score">00000</span></p>
       <p>rows <span id="rows">0</span></p>
-        <p><canvas id="upcoming"></canvas></p>
     </div>
     <canvas id="canvas">
       Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
@@ -839,11 +826,6 @@ D. For creating a new file "source.txt" for writing<BR>
     // base helper methods
     //-------------------------------------------------------------------------
 
-<!--
-//
-// Documentation:
-//   http://chami.com/tips/javascript/
-//
     function get(id)        { return document.getElementById(id);  }
     function hide(id)       { get(id).style.visibility = 'hidden'; }
     function show(id)       { get(id).style.visibility = null;     }
@@ -867,7 +849,7 @@ D. For creating a new file "source.txt" for writing<BR>
     // game constants
     //-------------------------------------------------------------------------
 
-    var KEY     = { ESC: 27, SPACE :32 ,LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
+    var KEY     = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
         DIR     = { UP: 0, RIGHT: 1, DOWN: 2, LEFT: 3, MIN: 0, MAX: 3 },
         stats   = new Stats(),
         canvas  = get('canvas'),
@@ -974,7 +956,7 @@ D. For creating a new file "source.txt" for writing<BR>
       showStats(); // initialize FPS counter
       addEvents(); // attach keydown and resize events
 
-      var last  = now = timestamp();
+      var last = now = timestamp();
       function frame() {
         now = timestamp();
         update(Math.min(1, (now - last) / 1000.0)); // using requestAnimationFrame have to be able to handle large delta's caused when it 'hibernates' in a background or non-visible tab
@@ -1243,7 +1225,7 @@ D. For creating a new file "source.txt" for writing<BR>
     run();
 
   </script>
-  </div>
+   </div>
   </div>
 </body>
 </html>
