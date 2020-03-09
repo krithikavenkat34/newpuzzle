@@ -68,76 +68,6 @@
 </head>
 
 <body>
-  <SCRIPT language="JavaScript"
-        type="text/javascript">
-<!--
-//
-// Documentation:
-//   http://chami.com/tips/javascript/
-//
-var d= function checkAnswer(quizForm,
-                     theAnswer,
-                     urlRight,
-                     urlWrong)
-{
-  var s = "?";
-
-  // go through the "current choices"
-  // to find the selected choice.
-  // radio boxes pointing to choices
-  // must be named "cc"
-  // change if necessary
-  //
-  var i = 0;
-  for(;i<quizForm.elements.length;i++)
-  {
-    if(("cc" ==
-        quizForm.elements[i].name) &&
-       (quizForm.elements[i].checked))
-    {
-      s = quizForm.elements[i].value;
-    }
-  }
-
-  // no choice was selected
-  //
-  if("?" == s)
-  {
-    alert("Please make a selection.");
-    return false;
-  }
-
-  // check if we have the correct
-  // choice selected
-  //
-  if(s == theAnswer)
-  {
-     alert("'"+s+"' is Correct.");
-    if( urlRight )
-    {
-    document.location.href = urlRight;
-    }
-    d=true;
-  }
-  else
-  {
-//     alert("'"+s+"' is incorrect.");
-    if( urlWrong )
-    {
-    document.location.href = urlWrong;
-    }
-    d=false;
-  }
-
-  // return "false" to indicate not to
-  // submit the form.
-  // change this to "true" if the form
-  // "action" is valid,
-  // i.e. points to a valid CGI script
-  //
-  return false;
-}
-</SCRIPT>
   <div class="split left">
     <div>
        <center><img id="im2" src="ablazepic.jpg"> <center>
@@ -850,6 +780,73 @@ D. For creating a new file "source.txt" for writing<BR>
     // base helper methods
     //-------------------------------------------------------------------------
 
+<!--
+//
+// Documentation:
+//   http://chami.com/tips/javascript/
+//
+var d= function checkAnswer(quizForm,
+                     theAnswer,
+                     urlRight,
+                     urlWrong)
+{
+  var s = "?";
+
+  // go through the "current choices"
+  // to find the selected choice.
+  // radio boxes pointing to choices
+  // must be named "cc"
+  // change if necessary
+  //
+  var i = 0;
+  for(;i<quizForm.elements.length;i++)
+  {
+    if(("cc" ==
+        quizForm.elements[i].name) &&
+       (quizForm.elements[i].checked))
+    {
+      s = quizForm.elements[i].value;
+    }
+  }
+
+  // no choice was selected
+  //
+  if("?" == s)
+  {
+    alert("Please make a selection.");
+    return false;
+  }
+
+  // check if we have the correct
+  // choice selected
+  //
+  if(s == theAnswer)
+  {
+     alert("'"+s+"' is Correct.");
+    if( urlRight )
+    {
+    document.location.href = urlRight;
+    }
+    d=true;
+  }
+  else
+  {
+//     alert("'"+s+"' is incorrect.");
+    if( urlWrong )
+    {
+    document.location.href = urlWrong;
+    }
+    d=false;
+  }
+
+  // return "false" to indicate not to
+  // submit the form.
+  // change this to "true" if the form
+  // "action" is valid,
+  // i.e. points to a valid CGI script
+  //
+  return false;
+}
     function get(id)        { return document.getElementById(id);  }
     function hide(id)       { get(id).style.visibility = 'hidden'; }
     function show(id)       { get(id).style.visibility = null;     }
